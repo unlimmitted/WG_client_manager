@@ -34,3 +34,5 @@ def show(public_key, ip, client_private_key, end_point, dns="1.1.1.1", MTU="1420
         Endpoint = {end_point}
         PersistentKeepalive = 30
         """
+    img = qrcode.make(template)
+    img.save("QR.png")
