@@ -1,7 +1,7 @@
 import qrcode
 import image
 
-
+#FIXME
 def create_conf(public_key, ip, client_private_key, end_point, dns="1.1.1.1", MTU="1420"):
     template = f"""
     [Interface]
@@ -19,7 +19,7 @@ def create_conf(public_key, ip, client_private_key, end_point, dns="1.1.1.1", MT
     img = qrcode.make(template)
     img.save("QR.png")
     return template
-
+#FIXME
 def show(public_key, ip, client_private_key, end_point, dns="1.1.1.1", MTU="1420"):
     template = f"""
         [Interface]
