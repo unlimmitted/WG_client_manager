@@ -1,0 +1,14 @@
+{
+  "settings": [
+    {
+      "end_point": "",
+      "network": "",
+      "MTU": "",
+      "DNS": "",
+      "Interface": "",
+      "address": "",
+      "login": "",
+      "password": ""
+    }
+  ]
+}
