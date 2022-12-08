@@ -16,7 +16,7 @@ class Ui_Settings_window(object):
         Settings_window.setObjectName("Settings_window")
         Settings_window.resize(282, 284)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("design\\../sico.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("design\\../icons/settings_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Settings_window.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(Settings_window)
         self.centralwidget.setObjectName("centralwidget")

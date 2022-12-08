@@ -3,12 +3,11 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QPixmap
 from routeros_api.exceptions import RouterOsApiCommunicationError
-import design
 import routeros_api
 import pywgkey
+from design import main_window_design, settings_design
 from qr_generate import create_conf, show
 import json
-import sdesign
 import os
 
 def get_interface_from_settings():
@@ -33,7 +32,7 @@ def get_max_ip(api):
     return max_ip + 1
 
 
-class MainApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
+class MainApp(QtWidgets.QMainWindow, main_window_design.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -139,7 +138,7 @@ class MainApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         subprocess.Popen(rf'explorer /select,"{os.getcwd()}\configs\{self.comboBox.currentText()}.conf"')
 
 
-class Settings_(QtWidgets.QMainWindow, sdesign.Ui_Settings_window):
+class Settings_(QtWidgets.QMainWindow, settings_design.Ui_Settings_window):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
