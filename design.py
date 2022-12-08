@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'design.ui'
+# Form implementation generated from reading ui file 'design/design.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(362, 0))
         MainWindow.setMaximumSize(QtCore.QSize(362, 16777215))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ico.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("design\\../ico.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -40,10 +40,10 @@ class Ui_MainWindow(object):
         self.lineEdit_4.setObjectName("lineEdit_4")
         self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
         self.groupBox_2.setEnabled(False)
-        self.groupBox_2.setGeometry(QtCore.QRect(250, 110, 101, 121))
+        self.groupBox_2.setGeometry(QtCore.QRect(250, 110, 101, 131))
         self.groupBox_2.setObjectName("groupBox_2")
         self.pushButton_2 = QtWidgets.QPushButton(self.groupBox_2)
-        self.pushButton_2.setGeometry(QtCore.QRect(10, 90, 81, 23))
+        self.pushButton_2.setGeometry(QtCore.QRect(10, 100, 81, 23))
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_4 = QtWidgets.QPushButton(self.groupBox_2)
         self.pushButton_4.setGeometry(QtCore.QRect(10, 60, 81, 23))
@@ -54,6 +54,9 @@ class Ui_MainWindow(object):
         self.comboBox = QtWidgets.QComboBox(self.groupBox_2)
         self.comboBox.setGeometry(QtCore.QRect(10, 40, 81, 22))
         self.comboBox.setObjectName("comboBox")
+        self.pushButton_3 = QtWidgets.QPushButton(self.groupBox_2)
+        self.pushButton_3.setGeometry(QtCore.QRect(10, 80, 81, 23))
+        self.pushButton_3.setObjectName("pushButton_3")
         self.groupBox_3 = QtWidgets.QGroupBox(self.centralwidget)
         self.groupBox_3.setGeometry(QtCore.QRect(10, 230, 231, 91))
         self.groupBox_3.setObjectName("groupBox_3")
@@ -64,7 +67,7 @@ class Ui_MainWindow(object):
         self.settings_button.setGeometry(QtCore.QRect(10, 50, 211, 23))
         self.settings_button.setObjectName("settings_button")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(250, 242, 101, 51))
+        self.label_3.setGeometry(QtCore.QRect(250, 252, 101, 61))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
@@ -90,6 +93,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "Delete"))
         self.pushButton_4.setText(_translate("MainWindow", "Show QR"))
         self.label_2.setText(_translate("MainWindow", "Choose client"))
+        self.pushButton_3.setText(_translate("MainWindow", "Show config"))
         self.groupBox_3.setTitle(_translate("MainWindow", "Connection"))
         self.connButton.setText(_translate("MainWindow", "Connect"))
         self.settings_button.setText(_translate("MainWindow", "Settings"))

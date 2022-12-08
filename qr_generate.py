@@ -1,8 +1,7 @@
 import qrcode
 import image
 
-#FIXME
-def create_conf(public_key, ip, client_private_key, end_point, dns="1.1.1.1", MTU="1420"):
+def create_conf(public_key, ip, client_private_key, end_point, dns, MTU, comment):
     template = f"""
     [Interface]
     PrivateKey = {client_private_key}
@@ -16,23 +15,14 @@ def create_conf(public_key, ip, client_private_key, end_point, dns="1.1.1.1", MT
     Endpoint = {end_point}
     PersistentKeepalive = 30
     """
-    img = qrcode.make(template)
-    img.save("QR.png")
+    QR = qrcode.make(template)
+    QR.save("QR.png")
+    file = open(f"configs/{comment}.conf", "w")
+    file.write(template)
+    file.close()
     return template
-#FIXME
-def show(public_key, ip, client_private_key, end_point, dns="1.1.1.1", MTU="1420"):
-    template = f"""
-        [Interface]
-        PrivateKey = {client_private_key}
-        Address = {ip}
-        DNS = {dns}
-        MTU = {MTU}
-
-        [Peer]
-        PublicKey = {public_key}
-        AllowedIPs = 0.0.0.0/0
-        Endpoint = {end_point}
-        PersistentKeepalive = 30
-        """
-    img = qrcode.make(template)
-    img.save("QR.png")
+def show(comment):
+    config = open(f"configs/{comment}.conf", "r")
+    QR = qrcode.make(config.read())
+    config.close()
+    QR.save("QR.png")
