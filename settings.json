@@ -1,14 +1,14 @@
 {
   "settings": [
     {
-      "end_point": "ton.cloudns.nz:12038",
-      "network": "10.10.10.0/32",
-      "MTU": "1420",
-      "DNS": "1.1.1.1",
-      "Interface": "wg-in",
-      "address": "192.168.0.49",
-      "login": "admin",
-      "password": "pfrhsnj"
+      "end_point": "",
+      "network": "",
+      "MTU": "",
+      "DNS": "",
+      "Interface": "",
+      "address": "",
+      "login": "",
+      "password": ""
     }
   ]
 }
